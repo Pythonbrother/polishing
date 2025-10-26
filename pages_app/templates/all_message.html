@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Messages</title>
+</head>
+<body>
+{% extends 'base.html' %}
+
+{% block something %}
+<h1>All Messages</h1>
+{% for message in messages %}
+    {{ message }}<br>
+{% endfor %}
+
+{% endblock something %}
+
+</body>
+</html>
