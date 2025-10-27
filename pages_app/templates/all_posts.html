@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Posts</title>
+</head>
+<body>
+{% extends 'base.html'%}
+{%block something%}
+<h2>ALL POSTS</h2>
+<pre>
+    {% for post in posts %}
+          Title: <a href="{% url 'detail_post' post.pk %}">{{post.title}}</a><br>
+         author: {{post.author}}<br><hr>
+    {% endfor %}
+</pre>
+
+{% endblock something%}
+</body>
+</html>

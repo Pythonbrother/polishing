@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detail Post</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block something %}
+<h2>DETAIL POST</h2>
+<pre>
+          Title: {{post.title}}<br>
+           Post: {{post.topic}}<br>
+         author: {{post.author}}<br><hr>
+</pre>
+{% endblock something %}
+</body>
+</html>
