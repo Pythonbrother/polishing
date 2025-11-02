@@ -12,6 +12,8 @@
           Title: {{post.title}}<br>
            Post: {{post.topic}}<br>
          author: {{post.author}}<br><hr>
+         <a href="{% url 'update_post' post.pk %}">update this post</a>
+         <a href="{% url 'delete_post' post.pk %}">delete this post</a>
 </pre>
 {% endblock something %}
 </body>

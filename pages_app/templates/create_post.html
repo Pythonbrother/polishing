@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Post</title>
+</head>
+<body>
+{% extends 'base.html' %}
+{% block something %}
+<h2>Creat Post Form</h2>
+<form action="" method="post">{% csrf_token %}
+    <label name="{{form.title.name}}">{{form.title.label}}</label>
+    <input type="text" name="{{ form.title.name }}">
+    <label name="{{form.topic.name}}">{{form.topic.label}}</label>
+    <input type="text" name="{{ form.topic.name }}">
+    <input type="submit" value="SUBMIT">
+</form>
+{% endblock something %}
+</body>
+</html>

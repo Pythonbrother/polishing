@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About User</title>
+</head>
+<body>
+{% if user.is_authenticated %}
+<p>username: {{user.username}}<br>email:{{user.email}}<br>
+<p> They are all posts you written.</p>
+{% for post in user.posts.all %}
+    {{post.title}}<br>
+{% endfor %}</p>
+{% else %}
+{% endif %}
+</body>
+</html>
